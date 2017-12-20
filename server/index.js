@@ -19,6 +19,7 @@ app.use(session({
 app.use(checkForSession);
 
 app.get('/api/swag', swag_controller.read);
+
 app.get('/api/user', auth_controller.getUser);
 app.post('/api/register', auth_controller.register);
 app.post('/api/login', auth_controller.login);

@@ -17,10 +17,10 @@ module.exports = {
     register: ( req,res,next ) => {
         const { session } = req;
         const { username,password } = req.body;
-        users.push({ id,usename,password });
+        users.push({ id,username,password });
         id++;
         session.user.username = username;
-        res.state(200).json(session.user);
+        res.status(200).json(users);
 
     },
     signout: ( req,res,next ) => {
